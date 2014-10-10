@@ -1,4 +1,3 @@
-
 //Denise Souza
 //SDI 1410
 //Assignment 2 / Project 2
@@ -6,12 +5,15 @@
 
 //Start
 //Making Portuguese Shrimp Mozambique
+
+
+//Variables
 var portugueseSauce = ["goya powder", "butter", "garlic", "beer", "hot sauce"];
 var readyToCook = true;
 var sauceBoiling = true; //
 var boilingMins = 10;
 var grandmaRecipe = "Grandma Silva\Õs Recipe";
-var email = "Mom sent email";
+var email = "email Mom sent";
 
 
 // Procedure Function 
@@ -25,31 +27,33 @@ var readyCheck = function(status) {
 };
 
 
-// Boolean Function 
+// Boolean Function
+
 var cookRice = function(waterBoil, minutesBoiling) {
     if ((waterBoil || !waterBoil) && (minutesBoiling < 8)) {
-        console.log("The rice is still cooking. Keep stirring!");
+        console.log("The rice is still cooking.");
         return false;
     } else if (!waterBoil && (minutesBoiling > 8)) {
-        //console.log("Well how have you been cooking rice without the water boiling?");
-        return false;
+        console.log("How long has this rice been boiling?");   // I struggled here to couldn't get false to return
+        return true;
     } else {
-        //console.log("The rice is finished!");
+        console.log("The rice is finished!");
         return true;
     }
 };
 
 
-// Number Function 
+// Number Function
+
 var cookShrimp = function(cookingTime) {
-    var finishTime = 15;
+    var finishTime = 40;
     var timeLeft = finishTime - cookingTime;
     while (cookingTime <= finishTime) {
-        if (cookingTime == 1) {
-            console.log(cookingTime + " minute down. Stir the shrimp!" + " Time remaining:" + timeLeft + " minutes.");
+        if (cookingTime === 10) {
+            console.log(cookingTime + " minute down. " + timeLeft + " minutes to go.");
             cookingTime += 5;
         } else {
-            console.log(cookingTime + " minutes down. Stir the shrimp!" + " Time remaining:" + timeLeft + " minutes.");
+            console.log(cookingTime + " minutes down. " + timeLeft + " minutes to go.");
             cookingTime += 5;
         }
     }
@@ -58,12 +62,10 @@ var cookShrimp = function(cookingTime) {
 };
 
 
-
-// NumberFunction
 var cookSauce = function(portionSize, ingredients) {
-    var sauceCookTime = 10;
+    var sauceCookTime = 20;
     if (portionSize < 2) {
-        sauceCookTime = 10;
+        sauceCookTime = 20;
     } else {
         sauceCookTime = sauceCookTime * portionSize / 2;
     }
@@ -78,36 +80,35 @@ var cookSauce = function(portionSize, ingredients) {
 
 
     }
-    console.log("Everything is in the pan. Cook the sauce for " + sauceCookTime + " minutes.");
+    console.log("Alrighty looks like we have everything we need. Cook the sauce for " + sauceCookTime + " minutes.");
     while (sauceCookTime > 0) {
         if (sauceCookTime == 1) {
-            console.log("Sauce is almost done! Only " + sauceCookTime + " minute left.");
+            console.log("Sauce is almost done, oh ya, oh ya! Only " + sauceCookTime + " minute left.");
         } else {
-            console.log("Sauce is almost! Only " + sauceCookTime + " minutes left.");
+            console.log("Sauce is almost done, oh ya, oh ya! Only " + sauceCookTime + " minutes left.");
         }
         sauceCookTime -= 5;
     }
-    console.log("Sauce is finished!");
+    console.log("Sauce is finished, get ready to drool!");
     return ingredients;
 };
 
 // String Function
+
 var recipeLookup = function(source, email) {
-    var recipe = "I found the recipe from " + source + " using the " + email + ".";
+    var recipe = "I got the recipe from the " + email + " it is " + source + ".";
     return recipe;
 };
 
 
 //Main Code
 
-status = prompt("Are we ready to cook?", "Yes");  //prompt procedure
-
+status = prompt("Are we ready to cook?", "Yes"); //prompt procedure
 
 readyCheck(readyToCook); //call Procedure
 
 
-
-var cookedRice = cookRice(sauceBoiling, boilingMins); 
+var cookedRice = cookRice(sauceBoiling, boilingMins);
 cookedRice = confirm("Has the rice finished cooking?, If Yes, click OK"); //confirm boolean
 if (cookedRice === true) {
     console.log("Yaaay, the rice is done cooking.");
@@ -115,20 +116,17 @@ if (cookedRice === true) {
     console.log("Ouch this rice is hard and not cooked");
 }
 
-timeLeft = parseInt(prompt("How much time left?"))
-var timeLeft = cookShrimp(2); // Call cookShrimp Number function
-
-recipeLookup(grandmaRecipe, email); // Call recipeLookup String function
-
-
-var sauce = cookSauce(3, portugueseSauce); // Call cookSauce 
+var timeLeft = cookShrimp(15); // Call cookShrimp Number function // struggled here couldn't get it to add up and count down minutes correctly
+timeLeft = confirm("Do we still have more time left on the sauce?");
+if (timeLeft === 20) {
+    console.log("The sauce has " + timeLeft + " minutes left.");
+}
 
 
-console.log("How much time is left on the shrimp?");
-console.log("The sauce has " + timeLeft + " minutes left.");
+var sauce = cookSauce(2, portugueseSauce); // Call cookSauce in number function 
+var recipe = recipeLookup(grandmaRecipe, email); // Call string function
+console.log(recipe);
 
-console.log("Great recipe where did you find it?");
-console.log(grandmaRecipe);
-
-console.log("You want the secret ingredients, here you go?");
+console.log("I hope you all enjoy this delicious Portuguese meal, it is my amazing," + grandmaRecipe + "!!!!");
+console.log("If you want the entire real recipe, shoot me an email. But...");
 console.log("They are: " + sauce.toString() + ".");
