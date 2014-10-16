@@ -3,49 +3,68 @@
 //Assignment 3 / Project 3
 //JSON DATA
 
-var playerInfo = {
-    "players": [{
+var tableData = {
+    "table": [{
             "name": "R. Wilson",
-            "position": "QB",
-            "team": "Seattle",
-            "starter": true
+            "tableName": "Souza Family",
+            "seatNumber": 1,
+            "tableReady": true
         }, {
             "name": "E. Lacy",
-            "position": "RB",
-            "team": "Green bay",
-            "starter": true
+            "tableName": "Souza Family",
+            "seatNumber": 2,
+            "tableReady": true
         }, {
             "name": "A. Ellington",
-            "position": "RB",
-            "team": "Arizona",
-            "starter": true
+            "tableName": "Souza Family",
+            "seatNumber": 3,
+            "tableReady": true
         }, {
             "name": "J. Nelson",
-            "position": "WR
-            "team": "Green bay",
-            "starter": true
+            "tableName": "Souza Family",
+            "seatNumber": 4,
+            "tableReady": true
         }, {
             "name": "P. Garcon",
-            "position": "WR",
-            "team": "Washington",
-            "starter": true
+            "tableName": "Souza Family",
+            "seatNumber": 5,
+            "tableReady": true
         }, {
             "name": "H. Miller",
-            "position": "TE,
-            "team": "Pitt",
-            "starter": true
+           "tableName": "Souza Family",
+            "seatNumber": 6,
+            "tableReady": true
         }, {
             "name": "K. Wright",
-            "position": "WR",
-            "team": "Tennessee",
-            "starter": true
+            "tableName": "Souza Family",
+            "seatNumber": 7,
+            "tableReady": true
         }, {
             "name": "D. Bailey",
-            "position": "K",
-            "team": "Dallas",
-            "starter": true
-        }
-
-
-    ]
-};
+            "tableName": "Souza Family",
+            "seatNumber": 8,
+            "tableReady": true
+        },
+			{
+            "name": "J. Bell",
+            "tableName": "Souza Family",
+            "seatNumber": 9,
+            "tableReady": true
+        },
+			{
+            "name": "N. Foles",
+            "tableName": "Souza Family",
+            "seatNumber": 10,
+            "tableReady": true
+        },
+        	{
+            "name": "F. Jackson",
+           "tableName": "Souza Family",
+            "seatNumber": 11,
+            "tableReady": true
+        },
+        	{
+            "name": "K. Benjamin",
+            "tableName": "Souza Family",
+            "seatNumber": 12,
+            "tableReady": true
