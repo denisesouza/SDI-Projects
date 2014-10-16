@@ -9,7 +9,7 @@ var readyToSit = true;
 var sauceBoiling = true; //
 var boilingMins = 10;
 var tableCard = "Who is sitting where?";
-//var email = "Mom sent email";
+
 
 
 // Procedure Function // Boolean Argument
@@ -29,10 +29,10 @@ var cookRice = function(waterBoil, minutesBoiling) {
         console.log("The rice is still cooking. Keep stirring!");
         return false;
     } else if (!waterBoil && (minutesBoiling > 8)) {
-        //console.log("Well how have you been cooking rice without the water boiling?");
         return false;
+    
     } else {
-        //console.log("The rice is finished!");
+        
         return true;
     }
 };
@@ -109,7 +109,7 @@ for (var i = 0; i < peopleNames.length; i++) { //Array Property // for Loop
 
     //console.log(peopleNames[i]);  //Left for console debug testing
 
-    if (peopleNames[i] === "Mom") { // conditional
+    if (peopleNames[i] === "Mom") { // argument Array
 
         console.log(peopleNames[i] + " is the head of the table.");
 
@@ -121,13 +121,13 @@ for (var i = 0; i < peopleNames.length; i++) { //Array Property // for Loop
 };
 
 
-var headOfTable = peopleNames.pop(); //Array Method
+var headOfTable = peopleNames.pop(); //Array Method pop
 console.log("Moving " + headOfTable + " to the top of the table list.");
 
 //Array Function 
 
 var peopleInfo = function(json) { //Array Argument
-    for (var i = 0; i < json.peopleNames.length; i++) {
+    for (var i = 0; i < json.peopleNames.length; i++) { //// Loop through json array string to find info
         var people = json.peopleNames[i];
         console.log("Name " + people.name + " is sitting at the " + people.table + " table in seat number " + people.seat);
     }; // Return Array
@@ -152,23 +152,19 @@ if (cookedRice === true) {
     console.log("Lets see how much longer until we can eat.");
 }
 
-//timeLeft = parseInt(prompt("How much time left?"))
+
 var timeLeft = cookShrimp(2); // Call cookShrimp Number function
-
-//tableCard(tableDetail); // Call recipeLookup String function
-
-
 var sauce = cookSauce(3, portugueseSauce); // Call cookSauce 
 
 
 console.log("How much time is left on the shrimp?");
 console.log("The shrimp has " + timeLeft + " minutes left.");
-
+console.log("")
 console.log("Lets get people seated in their assigned table and seat number.");
 console.log(tableCard);
 
 
-peopleInfo(tableInfo);
+peopleInfo(tableInfo); //return string and data from json data
 
 
 
