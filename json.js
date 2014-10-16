@@ -3,68 +3,41 @@
 //Assignment 3 / Project 3
 //JSON DATA
 
-var tableData = {
-    "table": [{
+var tableInfo = {
+    "peopleNames": [{
             "name": "R. Wilson",
-            "tableName": "Souza Family",
-            "seatNumber": 1,
-            "tableReady": true
+            "table": "Souza Family",
+            "seat": 1
         }, {
             "name": "E. Lacy",
-            "tableName": "Souza Family",
-            "seatNumber": 2,
-            "tableReady": true
+            "table": "Souza Family",
+            "seat": 2
         }, {
             "name": "A. Ellington",
-            "tableName": "Souza Family",
-            "seatNumber": 3,
-            "tableReady": true
+            "table": "Souza Family",
+            "seat": 3
         }, {
             "name": "J. Nelson",
-            "tableName": "Souza Family",
-            "seatNumber": 4,
-            "tableReady": true
+            "table": "Souza Family",
+            "seat": 4
         }, {
             "name": "P. Garcon",
-            "tableName": "Souza Family",
-            "seatNumber": 5,
-            "tableReady": true
+           "table": "Souza Family",
+            "seat": 5
         }, {
             "name": "H. Miller",
-           "tableName": "Souza Family",
-            "seatNumber": 6,
-            "tableReady": true
+            "table": "Souza Family",
+            "seat": 6
         }, {
             "name": "K. Wright",
-            "tableName": "Souza Family",
-            "seatNumber": 7,
-            "tableReady": true
+            "table": "Souza Family",
+            "seat": 7
         }, {
             "name": "D. Bailey",
-            "tableName": "Souza Family",
-            "seatNumber": 8,
-            "tableReady": true
-        },
-			{
-            "name": "J. Bell",
-            "tableName": "Souza Family",
-            "seatNumber": 9,
-            "tableReady": true
-        },
-			{
-            "name": "N. Foles",
-            "tableName": "Souza Family",
-            "seatNumber": 10,
-            "tableReady": true
-        },
-        	{
-            "name": "F. Jackson",
-           "tableName": "Souza Family",
-            "seatNumber": 11,
-            "tableReady": true
-        },
-        	{
-            "name": "K. Benjamin",
-            "tableName": "Souza Family",
-            "seatNumber": 12,
-            "tableReady": true
+            "table": "Souza Family",
+            "seat": 8
+        }
+
+
+    ]
+};
