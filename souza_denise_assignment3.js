@@ -124,7 +124,7 @@ for (var i = 0; i < peopleNames.length; i++) { //Array Property // for Loop
 var headOfTable = peopleNames.pop(); //Array Method pop
 console.log("Moving " + headOfTable + " to the top of the table list.");
 
-//Array Function 
+//Array Function - json data 
 
 var peopleInfo = function(json) { //Array Argument
     for (var i = 0; i < json.peopleNames.length; i++) { //// Loop through json array string to find info
