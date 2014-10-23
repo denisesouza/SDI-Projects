@@ -18,7 +18,25 @@ var stringEmailReturn;
 
 // String Library
 
+//does a string follow a pattern 123-456-7890 phone number
+//returns boolean
 
+function checkNumber(p){
+            var x = p.split(''); // splits the phone number into array
+           
+            for (var i=0; i < x.length; i++){
+                // Skip the "-" since we know they'll fail
+                if (i == 3 || i == 7) continue;
+           
+                // Check each digit, failing on the first non-numeric character
+                if(isNaN(x[i]))
+                    return false;
+            }
+            return true;
+        }
+       
+        var phone = '508-813-6453'
+        alert(checkNumber(phone));
 
 
 
