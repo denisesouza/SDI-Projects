@@ -10,10 +10,7 @@
 var stringEmailReturn;
 var stringTitleUpperReturn;
 var stringNumberReturn;
-//var stringURLReturn;
-//var stringTitleUpperReturn;
-//var stringSeparatorReturn;
-
+var numberDecimalReturn;
 
 
 
@@ -90,9 +87,20 @@ return result;
 
 //CHECK NUMBER FUNCTIONS
 
+
+
+
+// Format a number in decimal form to a specific number of decimals places
+//returns rounded number up 2 decimal places
+//#4
+var formatDecimal = function (num,afterDecimal) {
+        return Number(num.toFixed(afterDecimal));
+    };
+
+
 //number of hours or days between two dates
 //returns an added string +  calculation
-//#4
+//#5
 
 
 var numberDays = function(date1String, date2String){
@@ -105,7 +113,7 @@ return (day2-day1)/(1000*3600*24);
 
 //given a string version of a number
 //returning the value as an actual number
-//#5
+//#6
 
  var checkNumber = function (num) {
 return Number(num);
@@ -127,6 +135,8 @@ return Number(num);
 //main code
 stringEmailReturn = checkEmail("dot@dot.edu");  //MAKEUP: Assignment 3 Coding Logic & Syntax & Assignment 1 Output of initial Boolean
 console.log(stringEmailReturn);
+numberDecimalReturn=formatDecimal(1.02914,2);
+console.log(numberDecimalReturn);
 console.log("I have been on this earth for " + numberDays('1980-11-02', '2014-10-23') + " days!");
 stringTitleUpperReturn = checkTitleUpper("this is me hoping it works");
 console.log(stringTitleUpperReturn);
