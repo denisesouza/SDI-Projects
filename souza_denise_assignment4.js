@@ -8,6 +8,8 @@
 //global variables
 
 var stringEmailReturn;
+var stringTitleUpperReturn;
+var stringNumberReturn;
 //var stringURLReturn;
 //var stringTitleUpperReturn;
 //var stringSeparatorReturn;
@@ -26,6 +28,7 @@ var stringEmailReturn;
 //does a string follow a pattern 123-456-7890 phone number
 //trying out an alert instead of defining a global variable and calling it 
 //returns boolean
+//#1
 
 function checkNumber(p){
             var x = p.split(''); // splits the phone number into array
@@ -49,6 +52,7 @@ function checkNumber(p){
 
 //does a string follow an aaa@bbb.ccc pattern
 //returns boolean
+//#2
 
 var checkEmail = function(text) {
 	var atposition=text.indexOf("@");
@@ -63,9 +67,8 @@ if(atposition < 1 || dotposition <atposition+2 || dotposition+2>text.length){
 
 
 // Changes the first letter of the string to uppercaseCapitalize the first character of each word in a string
-// Returns modified string 
-
-var stringTitleUpperReturn;
+// Returns modified string
+//#3
 
 var checkTitleUpper = function (str) {
 var split = str.split(" ");
@@ -88,6 +91,8 @@ return result;
 //CHECK NUMBER FUNCTIONS
 
 //number of hours or days between two dates
+//returns an added string +  calculation
+//#4
 
 
 var numberDays = function(date1String, date2String){
@@ -97,6 +102,14 @@ return (day2-day1)/(1000*3600*24);
 };
 
 
+
+//given a string version of a number
+//returning the value as an actual number
+//#5
+
+ var checkNumber = function (num) {
+return Number(num);
+    };
 
 
 
@@ -117,3 +130,6 @@ console.log(stringEmailReturn);
 console.log("I have been on this earth for " + numberDays('1980-11-02', '2014-10-23') + " days!");
 stringTitleUpperReturn = checkTitleUpper("this is me hoping it works");
 console.log(stringTitleUpperReturn);
+stringNumberReturn = checkNumber("42")
+console.log(stringNumberReturn);
+
