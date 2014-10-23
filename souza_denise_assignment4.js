@@ -1,7 +1,12 @@
-//alert("JavaScript works!");
+//Denise Souza
+//SDI 1410
+//October, 23 2014
+//Assignment 4
+
+
 
 //global variables
-//var stringPhoneReturn;
+
 var stringEmailReturn;
 //var stringURLReturn;
 //var stringTitleUpperReturn;
@@ -19,6 +24,7 @@ var stringEmailReturn;
 // String Library
 
 //does a string follow a pattern 123-456-7890 phone number
+//trying out an alert instead of defining a global variable and calling it 
 //returns boolean
 
 function checkNumber(p){
@@ -35,7 +41,7 @@ function checkNumber(p){
             return true;
         }
        
-        var phone = '508-813-6453'
+        var phone = '508-813-6453'  
         alert(checkNumber(phone));
 
 
@@ -55,6 +61,22 @@ if(atposition < 1 || dotposition <atposition+2 || dotposition+2>text.length){
 		};
 		};
 
+
+// Changes the first letter of the string to uppercaseCapitalize the first character of each word in a string
+// Returns modified string 
+
+var stringTitleUpperReturn;
+
+var checkTitleUpper = function (str) {
+var split = str.split(" ");
+var result = "";
+for (var i = 0, j = split.length; i < j; i++) {
+var spNew = split[i].replace(split[i].charAt(0),(split[i].charAt(0)).toUpperCase());
+result = result.concat(spNew + " ");
+}
+return result;
+
+};
 
 
 
@@ -93,4 +115,5 @@ return (day2-day1)/(1000*3600*24);
 stringEmailReturn = checkEmail("dot@dot.edu");  //MAKEUP: Assignment 3 Coding Logic & Syntax & Assignment 1 Output of initial Boolean
 console.log(stringEmailReturn);
 console.log("I have been on this earth for " + numberDays('1980-11-02', '2014-10-23') + " days!");
-
+stringTitleUpperReturn = checkTitleUpper("this is me hoping it works");
+console.log(stringTitleUpperReturn);
