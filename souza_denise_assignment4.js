@@ -47,6 +47,14 @@ if(atposition < 1 || dotposition <atposition+2 || dotposition+2>text.length){
 
 //CHECK NUMBER FUNCTIONS
 
+//number of hours or days between two dates
+
+
+var numberDays = function(date1String, date2String){
+var day1 = new Date(date1String);
+var day2 = new Date(date2String);
+return (day2-day1)/(1000*3600*24);
+};
 
 
 
@@ -65,5 +73,6 @@ if(atposition < 1 || dotposition <atposition+2 || dotposition+2>text.length){
 
 //main code
 stringEmailReturn = checkEmail("dot@dot.edu");  //MAKEUP: Assignment 3 Coding Logic & Syntax & Assignment 1 Output of initial Boolean
-console.log(stringEmailReturn);	
+console.log(stringEmailReturn);
+console.log("I have been on this earth for " + numberDays('1980-11-02', '2014-10-23') + " days!");
 
